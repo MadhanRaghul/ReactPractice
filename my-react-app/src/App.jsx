@@ -4,8 +4,8 @@ import Some from "./Some"
 function App() {
     return(
       <>
-      <Header/>
-      <Header/>
+      <Header name = "yes"/>
+      <Header name = 'and'/>
       <Some/>
       </>
     )
