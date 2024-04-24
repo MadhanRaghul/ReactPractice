@@ -7,7 +7,7 @@ function App() {
       <>
       <Header name = "yes"/>
       <Header name = 'and'/>
-      <Status/>
+      <Status aha = "Ofc"/>
       
       </>
     )
