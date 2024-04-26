@@ -8,37 +8,52 @@ import Newpost from './Newpost'
 import Postpage from './Postpage'
 import Post from './Post'
 import { Routes, Route, Link } from 'react-router-dom'
+import { useState } from 'react'
 
 
 function App() {
+
+  const [post, setPost] = useState([
+    {
+      id : 1,
+      title : "My first post",
+      datetime : "Jule 01, 2021 11:17:36 AM",
+      body : "Made a video about Tesla Q1 results"
+    },
+    {
+      id : 2,
+      title : "My 2nd post",
+      datetime : "Jule 01, 2021 11:17:36 AM",
+      body : "Went to Panan on Weekends"
+    },
+    {
+      id : 3,
+      title : "My 3rd post",
+      datetime : "Jule 01, 2021 11:17:36 AM",
+      body : "Won an Oscar for Best actor of the year"
+    },
+    {
+      id : 4,
+      title : "My 4th post",
+      datetime : "Jule 01, 2021 11:17:36 AM",
+      body : "I dont know what to write bruh"
+    }
+  ])
+  const [search, setSearch] = useState("")
+  const [searchResults, setSearchResults] = useState([])
+  
+  
   return (
-    <div className="App">
+      <div className="App">
 
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/newpost">Newpost</Link></li>
-          <li><Link to="/postpage">Postpage</Link></li>
-        </ul>
-      </nav>
-
-    <Routes>
-      <Route path='/' element= {<Home/>}/>
-      <Route path='/about' element= {<About/>}/>
-      <Route path='/newpost' element= {<Newpost/>}/>
-      <Route path='/postpage' element= {<Postpage/>}/>
-      <Route path='/postpage/:id' element= {<Post/>}/>
-    </Routes>
-
-      {/* <Header />
-      <Nav />
+      <Header header = "THE WEBSITE"/>
+      <Nav search={search} setSearch={setSearch}/>
       <Home />
       <Newpost />
       <Postpage />
       <About />
       <Missing />
-      <Footer /> */}
+      <Footer />
 
     </div>
   );
