@@ -1,17 +1,51 @@
 *{
   margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html{
+  background-image: linear-gradient(aquamarine, rgb(255, 255, 255));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App{
   background-color: rgb(203, 203, 203);
+  text-align: center;
+  background-color: rgb(223, 255, 149);
+  max-width: 80vw;
+  margin: 0 0 10% 10%;
+  height: 100vh;
+  box-shadow: 0px 10px 10px black;
+}
+
+.Header{
+  font-size: 2em;
 }
 
 .Navbar{
+  font-size: 2em;
+  background-color: rgb(252, 162, 251);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Navbar ul li link{
+#search{
+  height: 7vh;
+  width: 40vw;
+}
+
+.Navbar li{
+  list-style: none;
+  padding: 6%;
+}
+
+.Navbar ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.Navbar a{
   text-decoration: none;
-  color: aqua;
-  
 }
